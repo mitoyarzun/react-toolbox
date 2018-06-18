@@ -1,5 +1,6 @@
-import React, { Component, PropTypes } from 'react';
-import CssTransitionGroup from 'react-addons-css-transition-group';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+import CSSTransitionGroup from 'react-transition-group/CSSTransitionGroup';
 import { ZoomIn, ZoomOut } from '../animations';
 import time from '../utils/time.js';
 import Hours from './ClockHours.js';
@@ -110,12 +111,12 @@ class Clock extends Component {
     return (
       <div data-react-toolbox='clock' className={theme.clock}>
         <div ref='placeholder' className={theme.placeholder} style={{height: this.state.radius * 2}}>
-          <CssTransitionGroup transitionName={animation} transitionEnterTimeout={500} transitionLeaveTimeout={500}>
+          <CSSTransitionGroup transitionName={animation} transitionEnterTimeout={500} transitionLeaveTimeout={500}>
             <div key={this.props.display} className={theme.clockWrapper} style={{height: this.state.radius * 2}}>
               {this.props.display === 'hours' ? this.renderHours() : null}
               {this.props.display === 'minutes' ? this.renderMinutes() : null}
             </div>
-          </CssTransitionGroup>
+          </CSSTransitionGroup>
         </div>
       </div>
     );
