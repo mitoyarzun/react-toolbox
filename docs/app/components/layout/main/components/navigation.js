@@ -1,20 +1,23 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { matchPath } from 'react-router';
 import { List, ListItem } from 'react-toolbox';
 import classnames from 'classnames';
 import components from '../modules/components';
 import style from './navigation.scss';
 
-const MainNavigation = ({ className }, { router }) => {
+const MainNavigation = ({ className, history }) => {
   const drawerItems = Object.keys(components).map((key) => {
-    const isActive = router.isActive(components[key].path);
+    const isActive = matchPath(history.location.pathname, {
+      path: components[key].path
+    });
     return (
       <ListItem
         key={key}
         caption={components[key].name}
         className={classnames(style.item, { [style.active]: isActive })}
         selectable
-        onClick={() => { router.push(components[key].path);}}
+        onClick={() => { history.push(components[key].path);}}
       />
     );
   });
@@ -32,7 +35,8 @@ const MainNavigation = ({ className }, { router }) => {
 };
 
 MainNavigation.propTypes = {
-  className: PropTypes.string
+  className: PropTypes.string,
+  history: PropTypes.object
 };
 
 MainNavigation.contextTypes = {
