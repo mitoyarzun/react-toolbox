@@ -5120,9 +5120,9 @@ rc@^1.1.7:
     minimist "^1.2.0"
     strip-json-comments "~2.0.1"
 
-react-css-themr@../react-css-themr/react-css-themr-1.7.3-beta.0.tgz:
-  version "1.7.3-beta.0"
-  resolved "../react-css-themr/react-css-themr-1.7.3-beta.0.tgz#2c914828bc78cfbdb34d4ccaa07ae07938df5668"
+react-css-themr-legacy@^1.8.1:
+  version "1.8.1"
+  resolved "https://registry.yarnpkg.com/react-css-themr-legacy/-/react-css-themr-legacy-1.8.1.tgz#92e05f3fe97a3e6b8acfd7bebe075ee7d91b4518"
   dependencies:
     invariant "^2.2.1"
 
