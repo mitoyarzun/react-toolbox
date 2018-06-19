@@ -1,4 +1,4 @@
-import { themr } from 'react-css-themr';
+import { themr } from 'react-css-themr-legacy';
 import { LAYOUT } from '../identifiers.js';
 import { Layout } from './Layout.js';
 import { Panel } from './Panel.js';

@@ -1,4 +1,4 @@
-import { themr } from 'react-css-themr';
+import { themr } from 'react-css-themr-legacy';
 import { MENU } from '../identifiers.js';
 import { IconButton } from '../button';
 import { MenuDivider } from './MenuDivider.js';

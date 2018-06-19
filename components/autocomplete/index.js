@@ -1,5 +1,5 @@
 import { AUTOCOMPLETE } from '../identifiers.js';
-import { themr } from 'react-css-themr';
+import { themr } from 'react-css-themr-legacy';
 import { autocompleteFactory } from './Autocomplete.js';
 import Chip from '../chip';
 import Input from '../input';

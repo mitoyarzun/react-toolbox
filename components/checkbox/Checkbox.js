@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
-import { themr } from 'react-css-themr';
+import { themr } from 'react-css-themr-legacy';
 import { CHECKBOX } from '../identifiers.js';
 import rippleFactory from '../ripple/Ripple.js';
 import checkFactory from './Check.js';

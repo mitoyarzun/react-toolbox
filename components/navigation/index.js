@@ -1,4 +1,4 @@
-import { themr } from 'react-css-themr';
+import { themr } from 'react-css-themr-legacy';
 import { NAVIGATION } from '../identifiers.js';
 import { navigationFactory } from './Navigation.js';
 import { Button } from '../button';

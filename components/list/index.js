@@ -1,4 +1,4 @@
-import { themr } from 'react-css-themr';
+import { themr } from 'react-css-themr-legacy';
 import { LIST } from '../identifiers.js';
 import { Avatar } from '../avatar';
 import { Checkbox } from '../checkbox';

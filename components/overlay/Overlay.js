@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
-import { themr } from 'react-css-themr';
+import { themr } from 'react-css-themr-legacy';
 import { OVERLAY } from '../identifiers.js';
 import Portal from '../hoc/Portal.js';
 

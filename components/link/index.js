@@ -1,4 +1,4 @@
-import { themr } from 'react-css-themr';
+import { themr } from 'react-css-themr-legacy';
 import { LINK } from '../identifiers.js';
 import { Link } from './Link.js';
 import theme from './theme.scss';

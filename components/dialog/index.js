@@ -1,4 +1,4 @@
-import { themr } from 'react-css-themr';
+import { themr } from 'react-css-themr-legacy';
 import { DIALOG } from '../identifiers.js';
 import { dialogFactory } from './Dialog.js';
 import Overlay from '../overlay';

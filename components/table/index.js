@@ -1,4 +1,4 @@
-import { themr } from 'react-css-themr';
+import { themr } from 'react-css-themr-legacy';
 import { TABLE } from '../identifiers.js';
 import { Checkbox } from '../checkbox';
 import { tableFactory } from './Table.js';

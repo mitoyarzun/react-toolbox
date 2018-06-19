@@ -1,4 +1,4 @@
-import { themr } from 'react-css-themr';
+import { themr } from 'react-css-themr-legacy';
 import { APP_BAR } from '../identifiers.js';
 import { appBarFactory } from './AppBar.js';
 import { IconButton } from '../button';

@@ -1,5 +1,5 @@
 import { BUTTON } from '../identifiers.js';
-import { themr } from 'react-css-themr';
+import { themr } from 'react-css-themr-legacy';
 import { buttonFactory } from './Button.js';
 import { browseButtonFactory } from './BrowseButton.js';
 import { iconButtonFactory } from './IconButton.js';

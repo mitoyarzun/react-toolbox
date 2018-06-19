@@ -1,4 +1,4 @@
-import { themr } from 'react-css-themr';
+import { themr } from 'react-css-themr-legacy';
 import { switchFactory } from './Switch.js';
 import { SWITCH } from '../identifiers.js';
 import thumbFactory from './Thumb.js';

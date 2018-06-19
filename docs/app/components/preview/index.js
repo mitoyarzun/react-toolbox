@@ -3,7 +3,7 @@ import React from 'react';
 import createClass from 'create-react-class';
 import PropTypes from 'prop-types';
 import ReactDOM from 'react-dom';
-import { ThemeProvider } from 'react-css-themr';
+import { ThemeProvider } from 'react-css-themr-legacy';
 import { transform } from 'babel-standalone';
 import * as ReactToolbox from 'react-toolbox';
 import theme from '../../theme/theme.js';

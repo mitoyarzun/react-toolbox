@@ -1,4 +1,4 @@
-import { themr } from 'react-css-themr';
+import { themr } from 'react-css-themr-legacy';
 import { TIME_PICKER } from '../identifiers.js';
 import { timePickerFactory } from './TimePicker.js';
 import timePickerDialogFactory from './TimePickerDialog.js';

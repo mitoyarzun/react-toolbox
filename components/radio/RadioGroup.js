@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { themr } from 'react-css-themr';
+import { themr } from 'react-css-themr-legacy';
 import { RADIO } from '../identifiers.js';
 import InjectRadioButton from './RadioButton.js';
 import { isComponentOfType } from '../utils/react.js';

@@ -1,4 +1,4 @@
-import { themr } from 'react-css-themr';
+import { themr } from 'react-css-themr-legacy';
 import { CARD } from '../identifiers.js';
 import { Card } from './Card.js';
 import { CardActions } from './CardActions.js';

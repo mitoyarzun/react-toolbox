@@ -1,5 +1,5 @@
 import { AVATAR } from '../identifiers.js';
-import { themr } from 'react-css-themr';
+import { themr } from 'react-css-themr-legacy';
 import { avatarFactory } from './Avatar.js';
 import FontIcon from '../font_icon/FontIcon.js';
 import theme from './theme.scss';

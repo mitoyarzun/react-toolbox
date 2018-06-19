@@ -2,7 +2,7 @@ import expect from 'expect';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import ReactTestUtils from 'react-dom/test-utils';
-import { themr } from 'react-css-themr';
+import { themr } from 'react-css-themr-legacy';
 import { CHIP } from '../../identifiers.js';
 import { chipFactory } from '../Chip';
 import { tooltipFactory } from '../../tooltip';

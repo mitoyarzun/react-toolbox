@@ -1,4 +1,4 @@
-import { themr } from 'react-css-themr';
+import { themr } from 'react-css-themr-legacy';
 import { PROGRESS_BAR } from '../identifiers.js';
 import { ProgressBar } from './ProgressBar.js';
 import theme from './theme.scss';

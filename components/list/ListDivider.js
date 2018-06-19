@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { themr } from 'react-css-themr';
+import { themr } from 'react-css-themr-legacy';
 import { LIST } from '../identifiers.js';
 
 const ListDivider = ({inset, theme}) => (

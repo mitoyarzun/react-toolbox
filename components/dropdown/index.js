@@ -1,4 +1,4 @@
-import { themr } from 'react-css-themr';
+import { themr } from 'react-css-themr-legacy';
 import { DROPDOWN } from '../identifiers.js';
 import { dropdownFactory } from './Dropdown.js';
 import { Input } from '../input';

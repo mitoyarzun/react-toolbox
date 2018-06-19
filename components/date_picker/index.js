@@ -1,4 +1,4 @@
-import { themr } from 'react-css-themr';
+import { themr } from 'react-css-themr-legacy';
 import { DATE_PICKER, DIALOG } from '../identifiers.js';
 import { datePickerFactory } from './DatePicker.js';
 import datePickerDialogFactory from './DatePickerDialog.js';

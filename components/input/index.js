@@ -1,5 +1,5 @@
 import { INPUT } from '../identifiers.js';
-import { themr } from 'react-css-themr';
+import { themr } from 'react-css-themr-legacy';
 import { inputFactory } from './Input.js';
 import FontIcon from '../font_icon/FontIcon.js';
 import theme from './theme.scss';

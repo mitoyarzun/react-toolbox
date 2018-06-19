@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
-import { themr } from 'react-css-themr';
+import { themr } from 'react-css-themr-legacy';
 import { LAYOUT } from '../identifiers.js';
 
 const NavDrawer = ({ active, children, className, onOverlayClick, permanentAt, pinned, scrollY, theme, width }) => {

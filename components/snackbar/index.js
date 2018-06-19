@@ -1,4 +1,4 @@
-import { themr } from 'react-css-themr';
+import { themr } from 'react-css-themr-legacy';
 import { SNACKBAR } from '../identifiers.js';
 import { snackbarFactory } from './Snackbar.js';
 import { Overlay } from '../overlay';
