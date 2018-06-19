@@ -1,5 +1,7 @@
 /*eslint-disable no-eval*/
 import React from 'react';
+import createClass from 'create-react-class';
+import PropTypes from 'prop-types';
 import ReactDOM from 'react-dom';
 import { ThemeProvider } from 'react-css-themr';
 import { transform } from 'babel-standalone';
@@ -9,11 +11,11 @@ import style from './style';
 
 const ERROR_TIMEOUT = 500;
 
-const Preview = React.createClass({
+const Preview = createClass({
   propTypes: {
-    className: React.PropTypes.string,
-    code: React.PropTypes.string.isRequired,
-    scope: React.PropTypes.object
+    className: PropTypes.string,
+    code: PropTypes.string.isRequired,
+    scope: PropTypes.object
   },
 
   getDefaultProps () {

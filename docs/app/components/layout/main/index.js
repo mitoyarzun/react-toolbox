@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import ReactDOM from 'react-dom';
 import { Button } from 'react-toolbox';
 import Appbar from '../../../components/appbar';
@@ -22,13 +23,14 @@ const LoadExampleButton = (props) => (
 );
 
 LoadExampleButton.propTypes = {
-  onClick: React.PropTypes.func
+  onClick: PropTypes.func
 };
 
 class Main extends React.Component {
   static propTypes = {
-    onClick: React.PropTypes.func,
-    params: React.PropTypes.object
+    match: PropTypes.object,
+    history: PropTypes.object,
+    onClick: PropTypes.func
   };
 
   state = {
@@ -57,7 +59,7 @@ class Main extends React.Component {
   renderExampleLoaders () {
     const examples = document.getElementsByClassName(this.LOAD_EXAMPLE_CLASS);
     Array.prototype.forEach.call(examples, (exampleNode, idx) => {
-      const exampleCode = components[this.props.params.component].examples[idx];
+      const exampleCode = components[this.props.match.params.component].examples[idx];
       ReactDOM.render(
         <LoadExampleButton onClick={this.handlePlaygroundLoad.bind(this, exampleCode)} />,
         exampleNode
@@ -68,8 +70,8 @@ class Main extends React.Component {
   resolveMarkdown () {
     const PLACEHOLDER = /<!-- example -->/g;
     const NODE = `<span class='${style['load-button']} ${this.LOAD_EXAMPLE_CLASS}'></span>`;
-    if (this.props.params.component) {
-      return components[this.props.params.component].docs.replace(PLACEHOLDER, NODE);
+    if (this.props.match.params.component) {
+      return components[this.props.match.params.component].docs.replace(PLACEHOLDER, NODE);
     } else {
       return BaseDocs;
     }
@@ -90,7 +92,7 @@ class Main extends React.Component {
           icon={this.state.playground ? 'close' : 'code'}
           onClick={this.handlePlayGroundClick}
         />
-        <MainNavigation className={style.navigation} />
+        <MainNavigation className={style.navigation} history={this.props.history} />
         <Markdown className={style.documentation} markdown={docs}/>
         <Playground ref='playground' className={style.playground} />
       </div>

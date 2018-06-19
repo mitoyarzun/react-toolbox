@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router';
+import { Link } from 'react-router-dom';
 import Button from 'react-toolbox/button';
 import {Card, CardTitle, CardMedia, CardText, CardActions} from 'react-toolbox/card';
 import Logo from '../../logo';
