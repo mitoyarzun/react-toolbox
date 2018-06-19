@@ -48,6 +48,11 @@ const factory = (Dialog) => {
       displayTime: new Date(this.props.value.getTime())
     };
 
+    constructor (props) {
+      super(props);
+      this.clock = React.createRef();
+    }
+
     componentWillReceiveProps (nextProps) {
       if (nextProps.value.getTime() !== this.state.displayTime.getTime()) {
         this.setState({ displayTime: new Date(nextProps.value.getTime()) });
@@ -56,7 +61,7 @@ const factory = (Dialog) => {
 
     componentDidUpdate (prevProps) {
       if (!prevProps.active && this.props.active) {
-        setTimeout(this.refs.clock.handleCalculateShape, 1000);
+        setTimeout(this.clock.handleCalculateShape, 1000);
       }
     }
 
@@ -129,7 +134,7 @@ const factory = (Dialog) => {
             {this.renderAMPMLabels()}
           </header>
           <Clock
-            ref='clock'
+            ref={this.clock}
             display={this.state.display}
             format={this.props.format}
             onChange={this.handleClockChange}

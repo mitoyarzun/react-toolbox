@@ -12,8 +12,8 @@ ReactDOM.render((
   <Router history={history}>
     <Switch>
       <Route path="/" component={Home} exact />
-      <Route path="/install" component={Install} />
-      <Route path="/components/:component?" component={Main} />
+      <Route path="/install" component={Install} exact />
+      <Route path="/components/:component?" component={Main} exact />
     </Switch>
   </Router>
 ), document.getElementById('app'));

@@ -33,6 +33,7 @@ class Playground extends React.Component {
         />
         <Preview
           className={style.preview}
+          key={this.state.code}
           code={this.state.code}
         />
       </aside>
