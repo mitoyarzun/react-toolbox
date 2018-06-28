@@ -8,6 +8,9 @@ import InjectTab from './Tab.js';
 import InjectTabContent from './TabContent.js';
 
 const factory = (Tab, TabContent, FontIcon) => {
+  const TabType = <Tab />.type;
+  const TabContentType = <TabContent />.type;
+
   class Tabs extends Component {
     static propTypes = {
       children: PropTypes.node,
@@ -115,12 +118,12 @@ const factory = (Tab, TabContent, FontIcon) => {
       const contents = [];
 
       React.Children.forEach(this.props.children, (item) => {
-        if (item.type === Tab) {
+        if (item.type === TabType) {
           headers.push(item);
           if (item.props.children) {
             contents.push(<TabContent children={item.props.children} theme={this.props.theme} />);
           }
-        } else if (item.type === TabContent) {
+        } else if (item.type === TabContentType) {
           contents.push(item);
         }
       });
