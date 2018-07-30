@@ -6,6 +6,10 @@ import time from '../utils/time.js';
 import utils from '../utils/utils.js';
 import CalendarMonth from './CalendarMonth.js';
 
+// The transition animations looks bad on IE, thus we need to disable them
+
+/* eslint-disable react/no-string-refs, react/no-children-prop, no-mixed-operators */
+
 const DIRECTION_STEPS = { left: -1, right: 1 };
 
 const factory = (IconButton) => {
@@ -15,6 +19,7 @@ const factory = (IconButton) => {
       display: PropTypes.oneOf(['months', 'years']),
       enabledDates: PropTypes.array,
       handleSelect: PropTypes.func,
+      isIE: PropTypes.bool,
       locale: PropTypes.oneOfType([
         PropTypes.string,
         PropTypes.object
@@ -70,7 +75,7 @@ const factory = (IconButton) => {
     handleYearClick = (event) => {
       const year = parseInt(event.currentTarget.id);
       const viewDate = time.setYear(this.props.selectedDate, year);
-      this.setState({viewDate});
+      this.setState({ viewDate });
       this.props.onChange(viewDate, false);
     };
 
@@ -120,13 +125,19 @@ const factory = (IconButton) => {
     }
 
     renderMonths () {
-      const { theme } = this.props;
+      const { theme, isIE } = this.props;
       const animation = this.state.direction === 'left' ? SlideLeft : SlideRight;
       return (
-        <div data-react-toolbox='calendar'>
+        <div data-react-toolbox="calendar">
           <IconButton id='left' className={theme.prev} icon='chevron_left' onClick={this.changeViewMonth} />
           <IconButton id='right' className={theme.next} icon='chevron_right' onClick={this.changeViewMonth} />
-          <CSSTransitionGroup transitionName={animation} transitionEnterTimeout={350} transitionLeaveTimeout={350}>
+          <CSSTransitionGroup
+            transitionName={animation}
+            transitionEnter={!isIE} // false disables the animation
+            transitionEnterTimeout={350}
+            transitionLeave={!isIE}
+            transitionLeaveTimeout={350}
+          >
             <CalendarMonth
               enabledDates={this.props.enabledDates}
               disabledDates={this.props.disabledDates}
