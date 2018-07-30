@@ -2,7 +2,7 @@
   "name": "react-toolbox-legacy",
   "description": "Unofficial fork of the react-toolbox package, compatible with React v16",
   "homepage": "https://github.com/mitoyarzun/react-toolbox-legacy",
-  "version": "1.5.3",
+  "version": "1.5.4",
   "main": "./lib",
   "author": {
     "name": "React Toolbox Team",
