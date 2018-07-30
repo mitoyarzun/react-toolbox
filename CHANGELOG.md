@@ -1,3 +1,8 @@
+<a name="1.5.4"></a>
+## 1.5.4 (2018-07-30)
+
+* Add option to supress calendar animations on IE11
+
 <a name="1.1.2"></a>
 ## 1.1.2 (2016-08-11)
 
