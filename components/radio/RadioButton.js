@@ -39,17 +39,23 @@ const factory = (Radio) => {
     };
 
     handleClick = (event) => {
-      const {checked, disabled, onChange} = this.props;
-      if (event.pageX !== 0 && event.pageY !== 0) this.blur();
+      const { checked, disabled, onChange } = this.props;
+      setTimeout(() => {
+        this.blur();
+      }, 500);
       if (!disabled && !checked && onChange) onChange(event, this);
     };
 
     blur () {
-      this.inputNode && this.inputNode.blur();
+      if (this.inputNode) {
+        this.inputNode.blur();
+      }
     }
 
     focus () {
-      this.inputNode && this.inputNode.focus();
+      if (this.inputNode) {
+        this.inputNode.focus();
+      }
     }
 
     render () {
@@ -58,7 +64,7 @@ const factory = (Radio) => {
       const _className = classnames(theme[this.props.disabled ? 'disabled' : 'field'], className);
       return (
         <label
-          data-react-toolbox='radio-button'
+          data-react-toolbox="radio-button"
           className={_className}
           onMouseEnter={onMouseEnter}
           onMouseLeave={onMouseLeave}
@@ -71,8 +77,8 @@ const factory = (Radio) => {
             name={name}
             onChange={() => {}}
             onClick={this.handleClick}
-            ref={node => { this.inputNode = node; }}
-            type='radio'
+            ref={(node) => { this.inputNode = node; }}
+            type="radio"
           />
           <Radio checked={checked} disabled={disabled} theme={theme} />
           {label ? <span className={theme.text}>{label}</span> : null}
